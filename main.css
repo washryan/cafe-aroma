@@ -1,0 +1,23 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.navbar {
+    background-color: #6F4E37;
+}
+
+#cabecalho .nav .nav-link.active {
+    background-color: #fff;
+    color: #6F4E37;
+}
+
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover,
+.nav-cardapio .nav-link.active:hover {
+    color: #fff;
+}
+
+.navbar-toggler {
+    background-color: #F5F5DC;
+}
