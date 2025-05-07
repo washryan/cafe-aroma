@@ -55,3 +55,12 @@ body {
 .text-colored {
     color: #6F4E37;
 }
+
+.nav-cardapio .nav-link.active, #fale-conosco button, .btn-newsletter, #btn-promocao {
+    background-color: #6F4E37;
+    color: #fff;
+}
+
+.nav-cardapio .nav-link:hover {
+    color: #6F4E37;
+}
