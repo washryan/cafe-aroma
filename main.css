@@ -20,35 +20,13 @@ body {
 
 .navbar-toggler {
     background-color: #F5F5DC;
-}body {
-    font-family: Roboto, sans-serif;
-}
-
-.navbar {
-    background-color: #6F4E37;
-}
-
-#cabecalho .nav .nav-link.active {
-    background-color: #fff;
-    color: #6F4E37;
-}
-
-#cabecalho .nav .nav-link,
-.navbar-brand,
-.navbar-brand:hover,
-.nav-cardapio .nav-link.active:hover {
-    color: #fff;
-}
-
-.navbar-toggler {
-    background-color: #F5F5DC;
 }
 
 .section-title {
     font-family: Pacifico, cursive;
 }
 
-#sobre-a-cafeteria, #cardapio{
+#sobre-a-cafeteria, #cardapio {
     background-color: #F5F5DC;
 }
 
@@ -56,11 +34,55 @@ body {
     color: #6F4E37;
 }
 
-.nav-cardapio .nav-link.active, #fale-conosco button, .btn-newsletter, #btn-promocao {
+.nav-cardapio .nav-link.active,
+#fale-conosco button,
+.btn-newsletter,
+#btn-promocao {
     background-color: #6F4E37;
     color: #fff;
 }
 
 .nav-cardapio .nav-link:hover {
     color: #6F4E37;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+#promocao {
+    background-color: #F5F5DC;
+}
+
+.contador-item {
+    background-color: #6F4E37;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    min-width: 80px;
+}
+
+.contador-numero {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.contador-texto {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.btn-newsletter {
+    border: none;
+}
+
+footer {
+    background-color: #6F4E37;
+    color: white;
 }
