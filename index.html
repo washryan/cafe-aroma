@@ -1,506 +1,691 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café Aroma - Cafeteria Artesanal</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Artesanal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="coffee-cup">
+            <div class="coffee"></div>
+        </div>
+        <p>Carregando...</p>
+    </div>
+    
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="#" class="navbar-brand">Café Artesanal <i class="fas fa-mug-hot"></i></a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a href="#reserva" class="btn-reservar">Reservar Mesa</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Café Aroma</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre">Sobre a cafeteria</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#eventos">Eventos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#cardapio">Nosso cardápio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contato">Fale conosco</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- HOME -->
+    <section class="home" id="home">
+        <div class="parallax-bg"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 content" data-aos="fade-right" data-aos-delay="200">
+                    <h1 class="animated-heading">CAFÉ FRESCO<br>TODAS AS MANHÃS</h1>
+                    <p>Desperte seus sentidos com o aroma inconfundível do nosso café artesanal, cuidadosamente selecionado e preparado para você.</p>
+                    <a href="#menu" class="btn-custom">Ver Menu</a>
+                </div>
+                <div class="col-lg-6 image-container" data-aos="fade-left" data-aos-delay="400">
+                    <img src="images/home-img-1.png" class="main-image" alt="Xícara de café">
+                    <div class="coffee-beans">
+                        <img src="images/coffee-bean-1.png" alt="Grão de café" class="bean bean-1">
+                    </div>
+                    <div class="coffee-cups">
+                        <img src="images/coffee-cup-1.png" alt="Xícara de café" class="cup cup-1">
+                        <img src="images/coffee-cup-2.png" alt="Xícara de café" class="cup cup-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#sobre">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </section>
 
-  <!-- Carousel -->
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/slides/slide1.jpg" class="d-block" alt="Interior da cafeteria">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Café Aroma</h5>
-        <p>Um espaço acolhedor onde cada xícara conta uma história.</p>
-      </div>
+    <!-- SOBRE -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="outline-text">SOBRE NÓS</h2>
+                <h3>POR QUE NOS ESCOLHER</h3>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
+                    <div class="about-image">
+                        <img src="images/about-img.png" alt="Baristas" class="img-fluid">
+                        <div class="floating-coffee">
+                            <img src="images/coffee-cup-3.png" alt="Xícara de café flutuante">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="about-content">
+                        <h3>O que torna nosso café especial!</h3>
+                        <p>Nosso café é cultivado em altitudes elevadas, onde o clima e o solo criam condições perfeitas para grãos de qualidade excepcional. Trabalhamos diretamente com produtores que compartilham nossa paixão por café e sustentabilidade.</p>
+                        <p>Cada xícara é preparada com precisão por baristas treinados, garantindo que você experimente todo o potencial de sabor dos nossos grãos cuidadosamente torrados.</p>
+                        <a href="#" class="btn-custom">Saiba Mais</a>
+                        
+                        <div class="features-container">
+                            <div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="feature-icon">
+                                    <img src="images/about-icon-1.png" alt="Café de Qualidade">
+                                </div>
+                                <h4>Café de Qualidade</h4>
+                            </div>
+                            <div class="feature-box" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="feature-icon">
+                                    <img src="images/about-icon-2.png" alt="Nossas Filiais">
+                                </div>
+                                <h4>Nossas Filiais</h4>
+                            </div>
+                            <div class="feature-box" data-aos="zoom-in" data-aos-delay="500">
+                                <div class="feature-icon">
+                                    <img src="images/about-icon-3.png" alt="Entrega Grátis">
+                                </div>
+                                <h4>Entrega Grátis</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coffee-pattern"></div>
+    </section>
+
+    <!-- PROMOÇÃO ESPECIAL -->
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-content" data-aos="zoom-in">
+                <h2>PROMOÇÃO ESPECIAL</h2>
+                <p>Aproveite 20% de desconto em todos os nossos cafés especiais. Oferta por tempo limitado!</p>
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="countdown-days">00</div>
+                        <div class="countdown-label">Dias</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="countdown-hours">00</div>
+                        <div class="countdown-label">Horas</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="countdown-minutes">00</div>
+                        <div class="countdown-label">Minutos</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="countdown-seconds">00</div>
+                        <div class="countdown-label">Segundos</div>
+                    </div>
+                </div>
+                <a href="#menu" class="btn-custom btn-promo">Aproveitar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="outline-text">NOSSO MENU</h2>
+                <h3>ITENS POPULARES</h3>
+            </div>
+            
+            <div class="menu-filter" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="cafe">Cafés</button>
+                <button class="filter-btn" data-filter="doces">Doces</button>
+                <button class="filter-btn" data-filter="salgados">Salgados</button>
+            </div>
+            
+            <div class="row menu-container">
+                <div class="col-lg-4 col-md-6 mb-4 menu-item-col" data-category="cafe" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="images/menu-1.png" alt="Café Especial">
+                        </div>
+                        <div class="menu-content">
+                            <h4>Café Especial</h4>
+                            <p>Nosso café premium, com notas de chocolate e frutas vermelhas.</p>
+                            <div class="menu-price">R$ 12,99</div>
+                        </div>
+                        <div class="menu-overlay">
+                            <div class="overlay-content">
+                                <h4>Café Especial</h4>
+                                <p>Grãos selecionados de alta altitude, torrados artesanalmente para extrair o máximo de sabor e aroma.</p>
+                                <a href="#" class="btn-small">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 menu-item-col" data-category="cafe" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="images/menu-2.png" alt="Cappuccino Cremoso">
+                        </div>
+                        <div class="menu-content">
+                            <h4>Cappuccino Cremoso</h4>
+                            <p>Café expresso com leite vaporizado e espuma cremosa.</p>
+                            <div class="menu-price">R$ 15,99</div>
+                        </div>
+                        <div class="menu-overlay">
+                            <div class="overlay-content">
+                                <h4>Cappuccino Cremoso</h4>
+                                <p>A combinação perfeita de café expresso intenso com leite vaporizado e uma camada generosa de espuma cremosa.</p>
+                                <a href="#" class="btn-small">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 menu-item-col" data-category="cafe" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="images/menu-3.png" alt="Café Gelado">
+                        </div>
+                        <div class="menu-content">
+                            <h4>Café Gelado</h4>
+                            <p>Café expresso gelado com um toque de baunilha.</p>
+                            <div class="menu-price">R$ 14,99</div>
+                        </div>
+                        <div class="menu-overlay">
+                            <div class="overlay-content">
+                                <h4>Café Gelado</h4>
+                                <p>Refrescante e energizante, nosso café gelado é preparado com expresso duplo, gelo e um toque de baunilha natural.</p>
+                                <a href="#" class="btn-small">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 menu-item-col" data-category="cafe" data-aos="fade-up" data-aos-delay="400">
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="images/menu-4.png" alt="Latte Macchiato">
+                        </div>
+                        <div class="menu-content">
+                            <h4>Latte Macchiato</h4>
+                            <p>Leite vaporizado com café expresso e uma camada de espuma.</p>
+                            <div class="menu-price">R$ 16,99</div>
+                        </div>
+                        <div class="menu-overlay">
+                            <div class="overlay-content">
+                                <h4>Latte Macchiato</h4>
+                                <p>Uma obra de arte em camadas: leite vaporizado, café expresso e uma delicada camada de espuma de leite.</p>
+                                <a href="#" class="btn-small">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 menu-item-col" data-category="cafe" data-aos="fade-up" data-aos-delay="500">
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="images/menu-5.png" alt="Mocha">
+                        </div>
+                        <div class="menu-content">
+                            <h4>Mocha</h4>
+                            <p>Café expresso com chocolate, leite vaporizado e chantilly.</p>
+                            <div class="menu-price">R$ 17,99</div>
+                        </div>
+                        <div class="menu-overlay">
+                            <div class="overlay-content">
+                                <h4>Mocha</h4>
+                                <p>A combinação irresistível de café expresso, chocolate belga, leite vaporizado e uma generosa porção de chantilly.</p>
+                                <a href="#" class="btn-small">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 menu-item-col" data-category="cafe" data-aos="fade-up" data-aos-delay="600">
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="images/menu-6.png" alt="Café Americano">
+                        </div>
+                        <div class="menu-content">
+                            <h4>Café Americano</h4>
+                            <p>Café expresso diluído em água quente, suave e aromático.</p>
+                            <div class="menu-price">R$ 11,99</div>
+                        </div>
+                        <div class="menu-overlay">
+                            <div class="overlay-content">
+                                <h4>Café Americano</h4>
+                                <p>Clássico e equilibrado, nosso Americano é preparado com expresso de alta qualidade diluído em água quente na proporção perfeita.</p>
+                                <a href="#" class="btn-small">Pedir Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coffee-beans-bg"></div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="outline-text">GALERIA</h2>
+                <h3>MOMENTOS ESPECIAIS</h3>
+            </div>
+            
+            <div class="row gallery-container">
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-img" style="background-image: url('images/gallery-1.jpg')">
+                        <div class="gallery-overlay">
+                            <a href="images/gallery-1.jpg" class="gallery-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-img" style="background-image: url('images/gallery-2.jpg')">
+                        <div class="gallery-overlay">
+                            <a href="images/gallery-2.jpg" class="gallery-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="gallery-img" style="background-image: url('images/gallery-3.jpg')">
+                        <div class="gallery-overlay">
+                            <a href="images/gallery-3.jpg" class="gallery-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="gallery-img" style="background-image: url('images/gallery-4.jpg')">
+                        <div class="gallery-overlay">
+                            <a href="images/gallery-4.jpg" class="gallery-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="gallery-img" style="background-image: url('images/gallery-5.jpg')">
+                        <div class="gallery-overlay">
+                            <a href="images/gallery-5.jpg" class="gallery-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="gallery-img" style="background-image: url('images/gallery-6.jpg')">
+                        <div class="gallery-overlay">
+                            <a href="images/gallery-6.jpg" class="gallery-link">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="outline-text">DEPOIMENTOS</h2>
+                <h3>O QUE NOSSOS CLIENTES DIZEM</h3>
+            </div>
+            
+            <div class="testimonial-slider" data-aos="fade-up" data-aos-delay="200">
+    <div class="testimonial-container">
+        <div class="testimonial-track">
+            <div class="testimonial-item">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="client-img">
+                    <img src="images/pic-1.png" alt="Cliente">
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Um lugar perfeito para trabalhar remotamente. Wi-Fi rápido, café delicioso e ambiente tranquilo. Já é meu escritório favorito!</p>
+                <h4>Ana Costa</h4>
+                <span>Cliente Satisfeita</span>
+                <div class="quote-icon-right">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+            </div>
+            
+            <div class="testimonial-item">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="client-img">
+                    <img src="images/pic-2.png" alt="Cliente">
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>O melhor café que já provei! O ambiente é acolhedor e o atendimento é excelente. Recomendo a todos que apreciam um bom café.</p>
+                <h4>João Silva</h4>
+                <span>Cliente Satisfeito</span>
+                <div class="quote-icon-right">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+            </div>
+            
+            <div class="testimonial-item">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="client-img">
+                    <img src="images/pic-3.png" alt="Cliente">
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Frequento esta cafeteria há anos e nunca me decepcionei. Os baristas são verdadeiros artistas e o café é sempre fresco e saboroso.</p>
+                <h4>Maria Oliveira</h4>
+                <span>Cliente Satisfeita</span>
+                <div class="quote-icon-right">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+            </div>
+            
+            <div class="testimonial-item">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="client-img">
+                    <img src="images/pic-4.png" alt="Cliente">
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Descobri este lugar por acaso e agora venho todos os dias. O cappuccino é divino e os doces são irresistíveis. Recomendo fortemente!</p>
+                <h4>Pedro Santos</h4>
+                <span>Cliente Satisfeito</span>
+                <div class="quote-icon-right">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="images/slides/slide2.jpg" class="d-block" alt="Barista preparando café">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Grãos Selecionados</h5>
-        <p>Trabalhamos apenas com os melhores grãos de produtores locais.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/slides/slide3.jpg" class="d-block" alt="Grãos de café">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Experiência Única</h5>
-        <p>Baristas especializados para criar a melhor experiência de café.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Próximo</span>
-  </button>
 </div>
-
-  <!-- Sobre a cafeteria -->
-  <section id="sobre" class="section-cream py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title">Sobre a cafeteria</h2>
-      </div>
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="images/cafeteria.jpg" alt="Interior do Café Aroma" class="img-fluid about-image">
-        </div>
-        <div class="col-lg-6 about-text">
-          <h3>Bem-vindo ao Café Aroma</h3>
-          <p>Um espaço acolhedor onde cada xícara conta uma história. Fundado em 2015, nosso café nasceu da paixão por grãos selecionados e pelo desejo de criar um ambiente onde as pessoas possam se conectar, trabalhar e relaxar.</p>
-          <h3>Nosso espaço</h3>
-          <p>Com um ambiente rústico e aconchegante, o Café Aroma foi projetado para proporcionar conforto e tranquilidade. Oferecemos Wi-Fi gratuito, tomadas em todas as mesas e uma seleção musical cuidadosamente escolhida para criar a atmosfera perfeita.</p>
-          <ul class="feature-list">
-            <li>Grãos selecionados de produtores locais</li>
-            <li>Baristas especializados</li>
-            <li>Ambiente acolhedor e tranquilo</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Eventos -->
-  <section id="eventos" class="section-white py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title">Próximos eventos</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="event-card">
-            <img src="images/eventos/evento1.jpg" class="event-image w-100" alt="Noite de Jazz">
-            <div class="event-content">
-              <h4 class="event-title">Noite de Jazz</h4>
-              <span class="event-date">15 de Novembro, 20:00</span>
-              <p>Aproveite uma noite relaxante com música de jazz ao vivo e um café especial.</p>
+            
+            <div class="testimonial-controls">
+                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                </div>
+                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
             </div>
-          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="event-card">
-            <img src="images/eventos/evento2.jpg" class="event-image w-100" alt="Workshop de Café">
-            <div class="event-content">
-              <h4 class="event-title">Workshop de Café</h4>
-              <span class="event-date">22 de Novembro, 14:00</span>
-              <p>Aprenda tudo sobre a arte de fazer café com nossos baristas experientes.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="event-card">
-            <img src="images/eventos/evento3.jpg" class="event-image w-100" alt="Encontro Literário">
-            <div class="event-content">
-              <h4 class="event-title">Encontro Literário</h4>
-              <span class="event-date">29 de Novembro, 19:00</span>
-              <p>Participe de um encontro com autores locais e discuta seus livros favoritos.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="coffee-pattern-light"></div>
+    </section>
 
-  <!-- Contador Regressivo -->
-  <section class="countdown-section">
-    <div class="container text-center">
-      <h2 class="countdown-title">Promoção Especial</h2>
-      <p class="text-light mb-4">Aproveite nossa promoção por tempo limitado. Compre um café e ganhe outro grátis!</p>
-      <div class="countdown-container">
-        <div class="countdown-box">
-          <div id="dias" class="countdown-number">07</div>
-          <div class="countdown-label">Dias</div>
+    <!-- RESERVA -->
+    <section class="reservation" id="reserva">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="outline-text">RESERVA</h2>
+                <h3>RESERVE UMA MESA</h3>
+            </div>
+            
+            <div class="reservation-form-container" data-aos="zoom-in" data-aos-delay="200">
+                <div class="coffee-decoration coffee-1"></div>
+                <div class="coffee-decoration coffee-2"></div>
+                <form id="reservation-form" class="reservation-form">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Nome" required>
+                                <label for="name">Nome</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <input type="tel" class="form-control" id="phone" placeholder="Telefone" required>
+                                <label for="phone">Telefone</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-floating">
+                                <input type="datetime-local" class="form-control" id="datetime" required>
+                                <label for="datetime">Data e Hora</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Mensagem" required></textarea>
+                            <label for="message">Mensagem</label>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-custom btn-submit">
+                            <span>Enviar Mensagem</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="countdown-box">
-          <div id="horas" class="countdown-number">24</div>
-          <div class="countdown-label">Horas</div>
-        </div>
-        <div class="countdown-box">
-          <div id="minutos" class="countdown-number">60</div>
-          <div class="countdown-label">Minutos</div>
-        </div>
-        <div class="countdown-box">
-          <div id="segundos" class="countdown-number">60</div>
-          <div class="countdown-label">Segundos</div>
-        </div>
-      </div>
-      <button id="btn-promocao" class="promo-button mt-4">Gerar Cupom</button>
-    </div>
-  </section>
+    </section>
 
-  <!-- Nosso cardápio -->
-  <section id="cardapio" class="section-cream py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title">Nosso cardápio</h2>
-      </div>
-      
-      <ul class="nav nav-tabs menu-tabs mb-4" id="menuTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="cafes-tab" data-bs-toggle="tab" data-bs-target="#cafes" type="button" role="tab" aria-controls="cafes" aria-selected="true">Cafés</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas" type="button" role="tab" aria-controls="bebidas" aria-selected="false">Bebidas Geladas</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="doces-tab" data-bs-toggle="tab" data-bs-target="#doces" type="button" role="tab" aria-controls="doces" aria-selected="false">Doces</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="salgados-tab" data-bs-toggle="tab" data-bs-target="#salgados" type="button" role="tab" aria-controls="salgados" aria-selected="false">Salgados</button>
-        </li>
-      </ul>
-      
-      <div class="tab-content" id="menuTabContent">
-        <div class="tab-pane fade show active" id="cafes" role="tabpanel" aria-labelledby="cafes-tab">
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="outline-text">CONTATO</h2>
+                <h3>FALE CONOSCO</h3>
+            </div>
+            
             <div class="row">
-                <div class="col-md-6 col-lg-3 mb-4 d-flex">
-                <div class="menu-item">
-                    <img src="images/cardapio/cafes/espresso.jpg" class="menu-image w-100" alt="Espresso">
-                    <div class="menu-content">
-                    <div class="menu-title">
-                        <span>Espresso</span>
-                        <span class="menu-price">R$ 8,00</span>
-                    </div>
-                    <p class="menu-description">Café expresso tradicional, encorpado e aromático.</p>
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1976900292937!2d-46.65868382374026!3d-23.561341061236447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1684887745436!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4 d-flex">
-                <div class="menu-item">
-                    <img src="images/cardapio/cafes/cappuccino.jpg" class="menu-image w-100" alt="Cappuccino">
-                    <div class="menu-content">
-                    <div class="menu-title">
-                        <span>Cappuccino</span>
-                        <span class="menu-price">R$ 12,00</span>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="contact-info">
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Endereço</h4>
+                                <p>Av. Paulista, 1000 - São Paulo, SP</p>
+                            </div>
+                        </div>
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefone</h4>
+                                <p>(11) 99999-9999</p>
+                            </div>
+                        </div>
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>contato@cafeartesanal.com.br</p>
+                            </div>
+                        </div>
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Horário de Funcionamento</h4>
+                                <p>Segunda a Sexta: 7h às 22h</p>
+                                <p>Sábados e Domingos: 8h às 20h</p>
+                            </div>
+                        </div>
+                        <div class="social-icons" data-aos="fade-up" data-aos-delay="500">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                     </div>
-                    <p class="menu-description">Expresso com leite vaporizado e uma pitada de cacau.</p>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4 d-flex">
-                <div class="menu-item">
-                    <img src="images/cardapio/cafes/latte.jpg" class="menu-image w-100" alt="Latte">
-                    <div class="menu-content">
-                    <div class="menu-title">
-                        <span>Latte</span>
-                        <span class="menu-price">R$ 14,00</span>
-                    </div>
-                    <p class="menu-description">Expresso suave com uma generosa camada de leite vaporizado.</p>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4 d-flex">
-                <div class="menu-item">
-                    <img src="images/cardapio/cafes/mocha.jpg" class="menu-image w-100" alt="Mocha">
-                    <div class="menu-content">
-                    <div class="menu-title">
-                        <span>Mocha</span>
-                        <span class="menu-price">R$ 16,00</span>
-                    </div>
-                    <p class="menu-description">Expresso com chocolate, leite vaporizado e chantilly.</p>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
-        
-        <div class="tab-pane fade" id="bebidas" role="tabpanel" aria-labelledby="bebidas-tab">
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="menu-item">
-                <img src="images/cardapio/bebidas-geladas/cold-brew.jpg" class="menu-image w-100" alt="Cold Brew">
-                <div class="menu-content">
-                  <div class="menu-title">
-                    <span>Cold Brew</span>
-                    <span class="menu-price">R$ 15,00</span>
-                  </div>
-                  <p class="menu-description">Café extraído a frio por 12 horas, resultando em uma bebida suave e refrescante.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="menu-item">
-                <img src="images/cardapio/bebidas-geladas/frappuccino.jpg" class="menu-image w-100" alt="Frappuccino">
-                <div class="menu-content">
-                  <div class="menu-title">
-                    <span>Frappuccino</span>
-                    <span class="menu-price">R$ 18,00</span>
-                  </div>
-                  <p class="menu-description">Bebida gelada à base de café, leite e gelo batido. Disponível em diversos sabores.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="menu-item">
-                <img src="images/cardapio/bebidas-geladas/iced-latte.jpg" class="menu-image w-100" alt="Iced Latte">
-                <div class="menu-content">
-                  <div class="menu-title">
-                    <span>Iced Latte</span>
-                    <span class="menu-price">R$ 16,00</span>
-                  </div>
-                  <p class="menu-description">Café espresso com leite gelado e cubos de gelo. Refrescante e energizante.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="tab-pane fade" id="doces" role="tabpanel" aria-labelledby="doces-tab">
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="menu-item">
-                <img src="images/cardapio/doces/bolo-chocolate.jpg" class="menu-image w-100" alt="Bolo de Chocolate">
-                <div class="menu-content">
-                  <div class="menu-title">
-                    <span>Bolo de Chocolate</span>
-                    <span class="menu-price">R$ 12,00</span>
-                  </div>
-                  <p class="menu-description">Fatia de bolo de chocolate com cobertura de ganache.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="menu-item">
-                <img src="images/cardapio/doces/cheesecake.jpg" class="menu-image w-100" alt="Cheesecake">
-                <div class="menu-content">
-                  <div class="menu-title">
-                    <span>Cheesecake</span>
-                    <span class="menu-price">R$ 15,00</span>
-                  </div>
-                  <p class="menu-description">Cheesecake cremoso com calda de frutas vermelhas.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="menu-item">
-                <img src="images/cardapio/doces/brownie.jpg" class="menu-image w-100" alt="Brownie">
-                <div class="menu-content">
-                  <div class="menu-title">
-                    <span>Brownie</span>
-                    <span class="menu-price">R$ 10,00</span>
-                  </div>
-                  <p class="menu-description">Brownie de chocolate com nozes, servido com sorvete de creme.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="tab-pane fade" id="salgados" role="tabpanel" aria-labelledby="salgados-tab">
-          <div class="row">
-            <div class="col-md-6 mb-4">
-              <div class="menu-item">
-                <img src="images/cardapio/salgados/croissant.jpg" class="menu-image w-100" alt="Croissant">
-                <div class="menu-content">
-                  <div class="menu-title">
-                    <span>Croissant</span>
-                    <span class="menu-price">R$ 8,00</span>
-                  </div>
-                  <p class="menu-description">Croissant folhado, disponível em diversos sabores: tradicional, chocolate, presunto e queijo.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mb-4">
-              <div class="menu-item">
-                <img src="images/cardapio/salgados/quiche.jpg" class="menu-image w-100" alt="Quiche">
-                <div class="menu-content">
-                  <div class="menu-title">
-                    <span>Quiche</span>
-                    <span class="menu-price">R$ 14,00</span>
-                  </div>
-                  <p class="menu-description">Quiche de alho-poró com bacon, servida com salada verde.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Newsletter -->
-  <section class="newsletter-section">
-    <div class="container text-center">
-      <h3 class="text-light mb-4">Assine nossa Newsletter</h3>
-      <p class="text-light mb-4">Receba novidades, promoções e eventos diretamente no seu e-mail.</p>
-      <form id="form-newsletter" class="newsletter-form">
-        <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required>
-        <button type="submit" class="newsletter-button">Assinar</button>
-      </form>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-pattern"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="100">
+                    <h3>Café Artesanal</h3>
+                    <p>Um espaço acolhedor onde cada xícara conta uma história. Venha nos visitar e descubra o verdadeiro sabor do café artesanal.</p>
+                    <div class="footer-logo">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                        <li><a href="#menu"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                        <li><a href="#depoimentos"><i class="fas fa-chevron-right"></i> Depoimentos</a></li>
+                        <li><a href="#contato"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
+                    <h3>Newsletter</h3>
+                    <p>Inscreva-se para receber novidades e promoções especiais.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Seu email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                    <div class="footer-app-links">
+                        <p>Baixe nosso aplicativo:</p>
+                        <div class="app-buttons">
+                            <a href="#" class="app-btn">
+                                <i class="fab fa-google-play"></i>
+                                <span>Google Play</span>
+                            </a>
+                            <a href="#" class="app-btn">
+                                <i class="fab fa-apple"></i>
+                                <span>App Store</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Café Artesanal. Desenvolvido por <a href="https://github.com/washryan" target="_blank">Ryan Leal</a></p>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Fale conosco -->
-  <section id="contato" class="section-white py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title">Fale conosco</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="contact-form">
-            <form id="form-contato">
-              <div class="mb-3">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Seu email" required>
-              </div>
-              <div class="mb-3">
-                <label for="mensagem" class="form-label">Mensagem</label>
-                <textarea class="form-control" id="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-              </div>
-              <button type="submit" class="contact-button">Enviar mensagem</button>
-            </form>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="contact-info">
-            <h4 class="mb-4">Informações de contato</h4>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <h5>Endereço</h5>
-                <p>Rua das Flores, 123 - Centro<br>São Paulo - SP</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div>
-                <h5>Telefone</h5>
-                <p>(11) 99999-9999</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div>
-                <h5>Email</h5>
-                <p>contato@cafearoma.com.br</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div>
-                <h5>Horário de Funcionamento</h5>
-                <p>Segunda a Sexta: 8h às 20h<br>Sábados e Domingos: 9h às 18h</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4 mb-md-0">
-          <h4 class="footer-title">Café Aroma</h4>
-          <p>Um espaço acolhedor onde cada xícara conta uma história. Venha nos visitar e descubra o verdadeiro sabor do café artesanal.</p>
-          <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4 mb-md-0">
-          <h4 class="footer-title">Links Rápidos</h4>
-          <ul class="footer-links">
-            <li><a href="#sobre">Sobre nós</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#cardapio">Cardápio</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li><a href="#">Política de Privacidade</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h4 class="footer-title">Galeria</h4>
-          <div class="row g-2">
-            <div class="col-4">
-              <img src="images/galeria/galeria1.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
-            </div>
-            <div class="col-4">
-              <img src="images/galeria/galeria2.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
-            </div>
-            <div class="col-4">
-              <img src="images/galeria/galeria3.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
-            </div>
-            <div class="col-4">
-              <img src="images/galeria/galeria4.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
-            </div>
-            <div class="col-4">
-              <img src="images/galeria/galeria5.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
-            </div>
-            <div class="col-4">
-              <img src="images/galeria/galeria6.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2023 Café Aroma. Todos os direitos reservados.</p>
-      </div>
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content">
+        <div class="lightbox-caption"></div>
+        <a class="lightbox-prev">&#10094;</a>
+        <a class="lightbox-next">&#10095;</a>
     </div>
-  </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
