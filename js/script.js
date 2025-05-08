@@ -33,9 +33,10 @@ $(document).ready(() => {
     }
   })
 
-  $(".back-to-top").click((e) => {
+  $(".back-to-top").on("click", (e) => {
     e.preventDefault()
     $("html, body").animate({ scrollTop: 0 }, 800)
+    return false
   })
 
   // Navegação fixa com mudança de cor ao rolar
@@ -92,7 +93,6 @@ $(document).ready(() => {
   // Slider de Depoimentos
   var currentSlide = 0
   var totalSlides = $(".testimonial-item").length
-  var slideWidth = $(".testimonial-item").outerWidth(true)
 
   function goToSlide(slideIndex) {
     if (slideIndex < 0) {
@@ -104,28 +104,40 @@ $(document).ready(() => {
     currentSlide = slideIndex
     var translateValue = -currentSlide * 100 + "%"
 
-    $(".testimonial-track").css("transform", "translateX(" + translateValue + ")")
+    $(".testimonial-track").css({
+      transform: "translateX(" + translateValue + ")",
+      width: totalSlides * 100 + "%",
+    })
+
+    $(".testimonial-item").css("width", 100 / totalSlides + "%")
+
     $(".dot").removeClass("active")
     $(".dot[data-slide='" + currentSlide + "']").addClass("active")
   }
 
-  $(".testimonial-next").click(() => {
-    goToSlide(currentSlide + 1)
-  })
+  // Inicializar o slider
+  $(document).ready(() => {
+    $(".testimonial-item").css("width", 100 / totalSlides + "%")
+    $(".testimonial-track").css("width", totalSlides * 100 + "%")
 
-  $(".testimonial-prev").click(() => {
-    goToSlide(currentSlide - 1)
-  })
+    $(".testimonial-next").click(() => {
+      goToSlide(currentSlide + 1)
+    })
 
-  $(".dot").click(function () {
-    var slideIndex = $(this).attr("data-slide")
-    goToSlide(Number.parseInt(slideIndex))
-  })
+    $(".testimonial-prev").click(() => {
+      goToSlide(currentSlide - 1)
+    })
 
-  // Auto slide para depoimentos
-  setInterval(() => {
-    goToSlide(currentSlide + 1)
-  }, 5000)
+    $(".dot").click(function () {
+      var slideIndex = Number.parseInt($(this).attr("data-slide"))
+      goToSlide(slideIndex)
+    })
+
+    // Auto slide para depoimentos
+    setInterval(() => {
+      goToSlide(currentSlide + 1)
+    }, 5000)
+  })
 
   // Contador regressivo
   function updateCountdown() {
@@ -133,8 +145,25 @@ $(document).ready(() => {
     var endDate = new Date()
     endDate.setDate(endDate.getDate() + 7)
 
+    // Armazenar a data final no localStorage se não existir
+    if (!localStorage.getItem("countdownEndDate")) {
+      localStorage.setItem("countdownEndDate", endDate.getTime())
+    }
+
+    // Usar a data armazenada
+    var storedEndDate = Number.parseInt(localStorage.getItem("countdownEndDate"))
+
     var now = new Date().getTime()
-    var distance = endDate - now
+    var distance = storedEndDate - now
+
+    // Se o contador chegou a zero, reiniciar para mais 7 dias
+    if (distance < 0) {
+      endDate = new Date()
+      endDate.setDate(endDate.getDate() + 7)
+      localStorage.setItem("countdownEndDate", endDate.getTime())
+      storedEndDate = Number.parseInt(localStorage.getItem("countdownEndDate"))
+      distance = storedEndDate - now
+    }
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24))
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
@@ -145,14 +174,6 @@ $(document).ready(() => {
     $("#countdown-hours").text(hours < 10 ? "0" + hours : hours)
     $("#countdown-minutes").text(minutes < 10 ? "0" + minutes : minutes)
     $("#countdown-seconds").text(seconds < 10 ? "0" + seconds : seconds)
-
-    if (distance < 0) {
-      clearInterval(countdownInterval)
-      $("#countdown-days").text("00")
-      $("#countdown-hours").text("00")
-      $("#countdown-minutes").text("00")
-      $("#countdown-seconds").text("00")
-    }
   }
 
   updateCountdown()
