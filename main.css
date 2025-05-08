@@ -11,11 +11,24 @@
   }
   
   body {
+    padding-top: 76px;
     font-family: "Poppins", sans-serif;
     color: var(--text-dark);
     background-color: var(--background-light);
   }
   
+  /* Ajuste para o carousel */
+  .carousel {
+    margin-top: -16px;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+  }
+  
+  /* Header e Navegação */
   .navbar {
     background-color: var(--primary-dark) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -54,10 +67,25 @@
     width: 100%;
   }
   
+  /* Carousel */
   .carousel-item {
     height: 500px;
+    overflow: hidden;
+    position: relative;
     background-size: cover;
     background-position: center;
+  }
+  
+  .carousel-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
   }
   
   .carousel-caption {
@@ -80,12 +108,9 @@
     color: var(--text-light);
   }
   
+  /* Seções */
   section {
     padding: 80px 0;
-  }
-
-  textarea {
-    resize: none;
   }
   
   .section-light {
@@ -127,6 +152,7 @@
     left: 20%;
   }
   
+  /* Sobre a cafeteria */
   .about-image {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -170,6 +196,7 @@
     font-size: 1.2rem;
   }
   
+  /* Eventos */
   .event-card {
     background-color: white;
     border-radius: 10px;
@@ -206,6 +233,7 @@
     display: block;
   }
   
+  /* Cardápio */
   .menu-tabs .nav-link {
     color: var(--primary) !important;
     font-weight: 600;
@@ -226,11 +254,14 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   .menu-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   }
   
   .menu-image {
@@ -240,6 +271,9 @@
   
   .menu-content {
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   .menu-title {
@@ -258,8 +292,10 @@
   .menu-description {
     color: #666;
     margin-bottom: 15px;
+    flex-grow: 1;
   }
   
+  /* Contador */
   .countdown-section {
     background-color: var(--primary-dark);
     color: white;
@@ -316,6 +352,7 @@
     transform: scale(1.05);
   }
   
+  /* Contato */
   .contact-form {
     background-color: white;
     padding: 30px;
@@ -373,6 +410,7 @@
     margin-right: 15px;
   }
   
+  /* Newsletter */
   .newsletter-section {
     background-color: var(--primary-light);
     padding: 50px 0;
@@ -405,6 +443,7 @@
     background-color: #c19b2e;
   }
   
+  /* Footer */
   footer {
     background-color: var(--primary-dark);
     color: var(--text-light);
@@ -467,6 +506,7 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
   
+  /* Animações */
   .animated {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -485,6 +525,7 @@
     animation-name: fadeIn;
   }
   
+  /* Responsividade */
   @media (max-width: 992px) {
     .carousel-item {
       height: 400px;
@@ -500,8 +541,12 @@
   }
   
   @media (max-width: 768px) {
+    body {
+      padding-top: 66px;
+    }
+  
     .carousel-item {
-      height: 350px;
+      height: 300px;
     }
   
     .carousel-caption h5 {
@@ -533,7 +578,7 @@
   
   @media (max-width: 576px) {
     .carousel-item {
-      height: 300px;
+      height: 250px;
     }
   
     .carousel-caption {
