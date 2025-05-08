@@ -33,4 +33,3 @@ Este projeto é uma landing page para uma cafeteria artesanal fictícia chamada 
 ---
 
 Desenvolvido como exercício para o curso da EBAC - 2025
-```
