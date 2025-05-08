@@ -1,88 +1,551 @@
-body {
-    font-family: Roboto, sans-serif;
-}
-
-.navbar {
-    background-color: #6F4E37;
-}
-
-#cabecalho .nav .nav-link.active {
-    background-color: #fff;
-    color: #6F4E37;
-}
-
-#cabecalho .nav .nav-link,
-.navbar-brand,
-.navbar-brand:hover,
-.nav-cardapio .nav-link.active:hover {
-    color: #fff;
-}
-
-.navbar-toggler {
-    background-color: #F5F5DC;
-}
-
-.section-title {
-    font-family: Pacifico, cursive;
-}
-
-#sobre-a-cafeteria, #cardapio {
-    background-color: #F5F5DC;
-}
-
-.text-colored {
-    color: #6F4E37;
-}
-
-.nav-cardapio .nav-link.active,
-#fale-conosco button,
-.btn-newsletter,
-#btn-promocao {
-    background-color: #6F4E37;
-    color: #fff;
-}
-
-.nav-cardapio .nav-link:hover {
-    color: #6F4E37;
-}
-
-.social-links li {
-    list-style: none;
-    display: inline;
-}
-
-.social-links a {
-    text-decoration: none;
-}
-
-#promocao {
-    background-color: #F5F5DC;
-}
-
-.contador-item {
-    background-color: #6F4E37;
-    color: white;
+:root {
+    --primary: #5d4037;
+    --primary-dark: #3e2723;
+    --primary-light: #8d6e63;
+    --accent: #d7ccc8;
+    --text-light: #efebe9;
+    --text-dark: #3e2723;
+    --background-light: #efebe9;
+    --background-cream: #f5f5dc;
+    --gold: #d4af37;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+  }
+  
+  .navbar {
+    background-color: var(--primary-dark) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-brand {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: var(--gold) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    color: var(--gold) !important;
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .carousel-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
     border-radius: 5px;
-    padding: 10px 15px;
-    min-width: 80px;
-}
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .carousel-caption h5 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+  }
+  
+  section {
+    padding: 80px 0;
+  }
 
-.contador-numero {
-    font-size: 2rem;
-    font-weight: bold;
+  textarea {
+    resize: none;
+  }
+  
+  .section-light {
+    background-color: var(--background-light);
+  }
+  
+  .section-dark {
+    background-color: var(--primary);
+    color: var(--text-light);
+  }
+  
+  .section-cream {
+    background-color: var(--background-cream);
+    background-image: url("/images/coffee-beans-bg.png");
+    background-blend-mode: overlay;
+    background-size: 200px;
+    background-attachment: fixed;
+  }
+  
+  .section-title {
+    font-family: "Playfair Display", serif;
+    color: var(--primary-dark);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-dark .section-title {
+    color: var(--gold);
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background-color: var(--gold);
+    bottom: -10px;
+    left: 20%;
+  }
+  
+  .about-image {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .about-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .about-text h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .feature-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .feature-list li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .feature-list li::before {
+    content: "☕";
+    margin-right: 10px;
+    color: var(--primary);
+    font-size: 1.2rem;
+  }
+  
+  .event-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .event-image {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .event-content {
+    padding: 20px;
+  }
+  
+  .event-title {
+    font-family: "Playfair Display", serif;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+  }
+  
+  .event-date {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 10px;
     display: block;
-}
-
-.contador-texto {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-}
-
-.btn-newsletter {
+  }
+  
+  .menu-tabs .nav-link {
+    color: var(--primary) !important;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 0;
     border: none;
-}
-
-footer {
-    background-color: #6F4E37;
+  }
+  
+  .menu-tabs .nav-link.active {
+    background-color: var(--primary);
+    color: white !important;
+  }
+  
+  .menu-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .menu-image {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .menu-content {
+    padding: 20px;
+  }
+  
+  .menu-title {
+    font-family: "Playfair Display", serif;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu-price {
+    color: var(--primary);
+    font-weight: 700;
+  }
+  
+  .menu-description {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .countdown-section {
+    background-color: var(--primary-dark);
     color: white;
-}
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .countdown-title {
+    font-family: "Playfair Display", serif;
+    color: var(--gold);
+    margin-bottom: 30px;
+  }
+  
+  .countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .countdown-box {
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .countdown-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 5px;
+  }
+  
+  .countdown-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .promo-button {
+    background-color: var(--gold);
+    color: var(--primary-dark);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .promo-button:hover {
+    background-color: #c19b2e;
+    transform: scale(1.05);
+  }
+  
+  .contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-control {
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(93, 64, 55, 0.25);
+  }
+  
+  .contact-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .contact-button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.02);
+  }
+  
+  .contact-info {
+    margin-top: 30px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-icon {
+    background-color: var(--primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+  }
+  
+  .newsletter-section {
+    background-color: var(--primary-light);
+    padding: 50px 0;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .newsletter-input {
+    flex-grow: 1;
+    border: none;
+    padding: 15px;
+    border-radius: 30px 0 0 30px;
+  }
+  
+  .newsletter-button {
+    background-color: var(--gold);
+    color: var(--primary-dark);
+    border: none;
+    padding: 0 25px;
+    font-weight: 600;
+    border-radius: 0 30px 30px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .newsletter-button:hover {
+    background-color: #c19b2e;
+  }
+  
+  footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 50px 0 20px;
+  }
+  
+  .footer-title {
+    font-family: "Playfair Display", serif;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--gold);
+    padding-left: 5px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    background-color: var(--primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background-color: var(--gold);
+    transform: translateY(-5px);
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+  
+  @media (max-width: 992px) {
+    .carousel-item {
+      height: 400px;
+    }
+  
+    .carousel-caption h5 {
+      font-size: 2rem;
+    }
+  
+    section {
+      padding: 60px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-item {
+      height: 350px;
+    }
+  
+    .carousel-caption h5 {
+      font-size: 1.8rem;
+    }
+  
+    .countdown-container {
+      flex-wrap: wrap;
+    }
+  
+    .countdown-box {
+      min-width: 80px;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+    }
+  
+    .newsletter-input {
+      border-radius: 30px;
+      margin-bottom: 10px;
+    }
+  
+    .newsletter-button {
+      border-radius: 30px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel-item {
+      height: 300px;
+    }
+  
+    .carousel-caption {
+      padding: 15px;
+    }
+  
+    .carousel-caption h5 {
+      font-size: 1.5rem;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  }
+  

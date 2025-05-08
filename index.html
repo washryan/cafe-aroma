@@ -1,398 +1,497 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Aroma - Cafeteria Artesanal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Aroma - Cafeteria Artesanal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
-        <div class="container">
-            <h1 class="navbar-brand m-0 section-title">Café Aroma</h1>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
-                <ul class="nav nav-pills d-block d-md-flex">
-                    <li class="nav-item fw-bold">
-                        <a href="#sobre-a-cafeteria" class="nav-link">
-                            <i class="bi bi-cup-hot me-1"></i>
-                            Sobre a cafeteria
-                        </a>
-                    </li>
-                    <li class="nav-item fw-bold">
-                        <a href="#eventos" class="nav-link">
-                            <i class="bi bi-calendar-check me-1"></i>
-                            Eventos
-                        </a>
-                    </li>
-                    <li class="nav-item fw-bold">
-                        <a href="#cardapio" class="nav-link">
-                            <i class="bi bi-card-text me-1"></i>
-                            Nosso cardápio
-                        </a>
-                    </li>
-                    <li class="nav-item fw-bold">
-                        <a href="#fale-conosco" class="nav-link">
-                            <i class="bi bi-chat-left-text me-1"></i>
-                            Fale conosco
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smooth-scroll="true">
-        <section id="sobre-a-cafeteria">
-            <div class="carousel slide" data-bs-ride="carousel" id="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000">
-                        <img src="https://placehold.co/1200x400?text=Imagem+" alt="Interior da cafeteria">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="https://placehold.co/1200x400?text=Imagem1+" alt="Barista preparando café">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="https://placehold.co/1200x400?text=Imagem2+" alt="Grãos de café especiais">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
-                </div>
-            </div>
-            <div class="pt-5 pb-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <img src="https://placehold.co/500x300?text=Imagem3+" class="d-block w-100 rounded" alt="Interior da cafeteria">
-                        </div>
-                        <div class="col-md-7 mt-3 mt-md-0">
-                            <h2 class="section-title">Sobre <span class="text-colored">a cafeteria</span></h2>
-                            <p>
-                                Bem-vindo ao Café Aroma, um espaço acolhedor onde cada xícara conta uma história. Fundado em 2015, nosso café nasceu da paixão por grãos selecionados e pelo desejo de criar um ambiente onde as pessoas possam se conectar, trabalhar e relaxar.
-                            </p>
-                            <h3 class="section-title">Nosso <span class="text-colored">espaço</span></h3>
-                            <p>
-                                Com um ambiente rústico e aconchegante, o Café Aroma foi projetado para proporcionar conforto e tranquilidade. Oferecemos Wi-Fi gratuito, tomadas em todas as mesas e uma seleção musical cuidadosamente escolhida para criar a atmosfera perfeita.
-                            </p>
-                            <ul>
-                                <li>Grãos selecionados de produtores locais</li>
-                                <li>Baristas especializados</li>
-                                <li>Ambiente acolhedor e tranquilo</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="eventos" class="pt-5 pb-5">
-            <div class="container">
-                <div class="row">
-                    <h2 class="section-title text-center">Para todas <span class="text-colored">as ocasiões</span></h2>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-4">
-                        <img src="https://placehold.co/400x200?text=Imagem4+" alt="Workshop de café" class="d-block w-100 rounded mb-2">
-                        <h3 class="section-title text-colored fs-4"><i class="bi bi-book-fill"></i>Workshops de Café</h3>
-                        <p>
-                            Aprenda sobre a história do café, métodos de preparo e participe de degustações guiadas pelos nossos baristas especializados. Workshops mensais com vagas limitadas.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="https://placehold.co/400x200?text=Imagem5+" alt="Noites de música" class="d-block w-100 rounded mb-2">
-                        <h3 class="section-title text-colored fs-4"><i class="bi bi-music-note-beamed"></i>Noites Musicais</h3>
-                        <p>Todas as sextas-feiras, recebemos músicos locais para apresentações acústicas enquanto você desfruta de nossos cafés especiais e pratos selecionados em um ambiente acolhedor.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="https://placehold.co/400x200?text=Imagem6+" alt="Espaço para reuniões" class="d-block w-100 rounded mb-2">
-                        <h3 class="section-title text-colored fs-4"><i class="bi bi-people-fill"></i>Espaço para reuniões</h3>
-                        <p>Oferecemos um espaço reservado para pequenas reuniões de negócios ou grupos de estudo. Com capacidade para até 10 pessoas, o ambiente é equipado com projetor e quadro branco.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="cardapio" class="pt-5 pb-5">
-            <div class="container">
-                <div class="row">
-                    <h2 class="section-title text-center mb-5">
-                        Nosso <span class="text-colored">cardápio</span>
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <aside>
-                            <nav class="nav nav-pills flex-column nav-cardapio">
-                                <button type="button" data-bs-toggle="tab" data-bs-target="#cafes-especiais" class="fw-bold text-start nav-link text-colored active">Cafés Especiais</button>
-                                <button type="button" data-bs-toggle="tab" data-bs-target="#bebidas-geladas" class="fw-bold text-start nav-link text-colored">Bebidas Geladas</button>
-                                <button type="button" data-bs-toggle="tab" data-bs-target="#doces" class="fw-bold text-start nav-link text-colored">Doces & Bolos</button>
-                                <button type="button" data-bs-toggle="tab" data-bs-target="#salgados" class="fw-bold text-start nav-link text-colored">Salgados</button>
-                                <button type="button" data-bs-toggle="tab" data-bs-target="#brunch" class="fw-bold text-start nav-link text-colored">Brunch</button>
-                            </nav>
-                        </aside>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="cafes-especiais">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem7+" alt="Espresso">
-                                        <h5 class="text-colored fw-bold mt-2">Espresso</h5>
-                                        <p>
-                                            Café puro e intenso, extraído sob alta pressão. A base de todos os cafés.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem8+" alt="Cappuccino">
-                                        <h5 class="text-colored fw-bold mt-2">Cappuccino</h5>
-                                        <p>
-                                            Espresso com leite vaporizado e espuma de leite em partes iguais.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem9+" alt="Latte">
-                                        <h5 class="text-colored fw-bold mt-2">Latte</h5>
-                                        <p>
-                                            Espresso com leite vaporizado e uma fina camada de espuma de leite.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem10+" alt="Mocha">
-                                        <h5 class="text-colored fw-bold mt-2">Mocha</h5>
-                                        <p>
-                                            Espresso com chocolate, leite vaporizado e espuma de leite.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="bebidas-geladas">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem11+" alt="Cold Brew">
-                                        <h5 class="text-colored fw-bold mt-2">Cold Brew</h5>
-                                        <p>
-                                            Café extraído a frio por 12 horas, resultando em uma bebida suave e refrescante.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem12+" alt="Frappuccino">
-                                        <h5 class="text-colored fw-bold mt-2">Frappuccino</h5>
-                                        <p>
-                                            Bebida gelada à base de café, leite, gelo e xarope, batidos e cobertos com chantilly.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem13+" alt="Iced Latte">
-                                        <h5 class="text-colored fw-bold mt-2">Iced Latte</h5>
-                                        <p>
-                                            Espresso com leite gelado e cubos de gelo. Refrescante e energizante.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="doces">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem14+" alt="Bolo de Chocolate">
-                                        <h5 class="text-colored fw-bold mt-2">Bolo de Chocolate</h5>
-                                        <p>
-                                            Bolo úmido de chocolate com cobertura de ganache e raspas de chocolate.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem15+" alt="Cheesecake">
-                                        <h5 class="text-colored fw-bold mt-2">Cheesecake</h5>
-                                        <p>
-                                            Clássico cheesecake com base de biscoito e cobertura de frutas vermelhas.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem16+" alt="Brownie">
-                                        <h5 class="text-colored fw-bold mt-2">Brownie</h5>
-                                        <p>
-                                            Brownie artesanal com nozes, servido com sorvete de baunilha (opcional).
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="salgados">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem17+" alt="Croissant">
-                                        <h5 class="text-colored fw-bold mt-2">Croissant</h5>
-                                        <p>
-                                            Croissant tradicional francês, feito com massa folhada e manteiga.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem18+" alt="Quiche">
-                                        <h5 class="text-colored fw-bold mt-2">Quiche Lorraine</h5>
-                                        <p>
-                                            Torta salgada com recheio de bacon, queijo e creme de leite.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="brunch">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem19+" alt="Avocado Toast">
-                                        <h5 class="text-colored fw-bold mt-2">Avocado Toast</h5>
-                                        <p>
-                                            Torrada artesanal com abacate amassado, ovo pochê e sementes.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <img class="d-block w-100" src="https://placehold.co/200x150?text=Imagem20+" alt="Panquecas">
-                                        <h5 class="text-colored fw-bold mt-2">Panquecas Americanas</h5>
-                                        <p>
-                                            Torre de panquecas fofas com xarope de bordo e frutas frescas.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="fale-conosco" class="pt-5 pb-5">
-            <div class="container">
-                <div class="row">
-                    <h2 class="section-title text-center">Fale <span class="text-colored">conosco</span></h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-7 mb-5">
-                        <form class="form-contato">
-                            <div class="mb-3">
-                                <label for="#nome" class="form-label fw-bold text-colored">Seu nome</label>
-                                <input type="text" id="nome" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="#email" class="form-label fw-bold text-colored">Seu e-mail</label>
-                                <input type="email" id="email" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="telefone" class="form-label fw-bold text-colored">Seu telefone (opcional)</label>
-                                <input type="tel" id="telefone" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="mensagem" class="form-label fw-bold text-colored">Sua mensagem</label>
-                                <textarea id="mensagem" class="form-control" required></textarea>
-                            </div>
-                            <button type="submit" class="btn fw-bold">Enviar</button>
-                        </form>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="row">
-                            <h3 class="section-title fs-4 text-colored">
-                                <i class="bi bi-hand-thumbs-up-fill"></i>
-                                Redes sociais
-                            </h3>
-                            <ul class="social-links">
-                                <li class="fs-5">
-                                    <a href="#">
-                                        <i class="bi bi-facebook text-colored"></i>
-                                    </a>
-                                </li>
-                                <li class="fs-5 ms-1 me-1">
-                                    <a href="#">
-                                        <i class="bi bi-instagram text-colored"></i>
-                                    </a>
-                                </li>
-                                <li class="fs-5">
-                                    <a href="#">
-                                        <i class="bi bi-whatsapp text-colored"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="row mt-4">
-                            <h3 class="section-title fs-4 text-colored">
-                                <i class="bi bi-cursor-fill"></i>
-                                Endereço
-                            </h3>
-                            <p>
-                                Rua dos Cafezais, 123 - Jardim Botânico - São Paulo - SP
-                            </p>
-                        </div>
-                        <div class="row mt-4">
-                            <h3 class="section-title fs-4 text-colored">
-                                <i class="bi bi-clock-fill"></i>
-                                Horário de funcionamento
-                            </h3>
-                            <p>
-                                Segunda a Sexta: 7h às 22h<br>
-                                Sábados e Domingos: 8h às 20h
-                            </p>
-                        </div>
-                        <div class="row mt-4">
-                            <h3 class="section-title fs-4 text-colored">
-                                <i class="bi bi-envelope-fill"></i>
-                                Newsletter
-                            </h3>
-                            <form id="form-newsletter">
-                                <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Seu e-mail" required>
-                                    <button class="btn btn-newsletter" type="submit">Assinar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="promocao" class="pt-5 pb-5 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2 class="section-title">Promoção <span class="text-colored">Especial</span></h2>
-                        <p class="mt-3 mb-4">Compre um café e ganhe outro na próxima visita! Promoção válida por:</p>
-                        <div id="contador" class="d-flex justify-content-center gap-3 mb-4">
-                            <div class="contador-item">
-                                <span id="dias" class="contador-numero">00</span>
-                                <span class="contador-texto">Dias</span>
-                            </div>
-                            <div class="contador-item">
-                                <span id="horas" class="contador-numero">00</span>
-                                <span class="contador-texto">Horas</span>
-                            </div>
-                            <div class="contador-item">
-                                <span id="minutos" class="contador-numero">00</span>
-                                <span class="contador-texto">Minutos</span>
-                            </div>
-                            <div class="contador-item">
-                                <span id="segundos" class="contador-numero">00</span>
-                                <span class="contador-texto">Segundos</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-lg" id="btn-promocao">Aproveitar agora</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Café Aroma</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre a cafeteria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#eventos">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cardapio">Nosso cardápio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Fale conosco</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <footer class="text-center p-4">
-        <p class="mb-0">© 2025 Café Aroma. Todos os direitos reservados.</p>
-    </footer>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/slides/slide1.jpg" class="d-block w-100" alt="Interior da cafeteria">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Café Aroma</h5>
+          <p>Um espaço acolhedor onde cada xícara conta uma história.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slides/slide2.jpg" class="d-block w-100" alt="Barista preparando café">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Grãos Selecionados</h5>
+          <p>Trabalhamos apenas com os melhores grãos de produtores locais.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slides/slide3.jpg" class="d-block w-100" alt="Grãos de café">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Experiência Única</h5>
+          <p>Baristas especializados para criar a melhor experiência de café.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+  <section id="sobre" class="section-cream py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Sobre a cafeteria</h2>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="images/cafeteria.jpg" alt="Interior do Café Aroma" class="img-fluid about-image">
+        </div>
+        <div class="col-lg-6 about-text">
+          <h3>Bem-vindo ao Café Aroma</h3>
+          <p>Um espaço acolhedor onde cada xícara conta uma história. Fundado em 2025, nosso café nasceu da paixão por grãos selecionados e pelo desejo de criar um ambiente onde as pessoas possam se conectar, trabalhar e relaxar.</p>
+          <h3>Nosso espaço</h3>
+          <p>Com um ambiente rústico e aconchegante, o Café Aroma foi projetado para proporcionar conforto e tranquilidade. Oferecemos Wi-Fi gratuito, tomadas em todas as mesas e uma seleção musical cuidadosamente escolhida para criar a atmosfera perfeita.</p>
+          <ul class="feature-list">
+            <li>Grãos selecionados de produtores locais</li>
+            <li>Baristas especializados</li>
+            <li>Ambiente acolhedor e tranquilo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="eventos" class="section-white py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Próximos eventos</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="event-card">
+            <img src="images/eventos/evento1.jpg" class="event-image w-100" alt="Noite de Jazz">
+            <div class="event-content">
+              <h4 class="event-title">Noite de Jazz</h4>
+              <span class="event-date">15 de Novembro, 20:00</span>
+              <p>Aproveite uma noite relaxante com música de jazz ao vivo e um café especial.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="event-card">
+            <img src="images/eventos/evento2.jpg" class="event-image w-100" alt="Workshop de Café">
+            <div class="event-content">
+              <h4 class="event-title">Workshop de Café</h4>
+              <span class="event-date">22 de Novembro, 14:00</span>
+              <p>Aprenda tudo sobre a arte de fazer café com nossos baristas experientes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="event-card">
+            <img src="images/eventos/evento3.jpg" class="event-image w-100" alt="Encontro Literário">
+            <div class="event-content">
+              <h4 class="event-title">Encontro Literário</h4>
+              <span class="event-date">29 de Novembro, 19:00</span>
+              <p>Participe de um encontro com autores locais e discuta seus livros favoritos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="countdown-section">
+    <div class="container text-center">
+      <h2 class="countdown-title">Promoção Especial</h2>
+      <p class="text-light mb-4">Aproveite nossa promoção por tempo limitado. Compre um café e ganhe outro grátis!</p>
+      <div class="countdown-container">
+        <div class="countdown-box">
+          <div id="dias" class="countdown-number">07</div>
+          <div class="countdown-label">Dias</div>
+        </div>
+        <div class="countdown-box">
+          <div id="horas" class="countdown-number">24</div>
+          <div class="countdown-label">Horas</div>
+        </div>
+        <div class="countdown-box">
+          <div id="minutos" class="countdown-number">60</div>
+          <div class="countdown-label">Minutos</div>
+        </div>
+        <div class="countdown-box">
+          <div id="segundos" class="countdown-number">60</div>
+          <div class="countdown-label">Segundos</div>
+        </div>
+      </div>
+      <button id="btn-promocao" class="promo-button mt-4">Gerar Cupom</button>
+    </div>
+  </section>
+
+  <section id="cardapio" class="section-cream py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Nosso cardápio</h2>
+      </div>
+      
+      <ul class="nav nav-tabs menu-tabs mb-4" id="menuTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="cafes-tab" data-bs-toggle="tab" data-bs-target="#cafes" type="button" role="tab" aria-controls="cafes" aria-selected="true">Cafés</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas" type="button" role="tab" aria-controls="bebidas" aria-selected="false">Bebidas Geladas</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="doces-tab" data-bs-toggle="tab" data-bs-target="#doces" type="button" role="tab" aria-controls="doces" aria-selected="false">Doces</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="salgados-tab" data-bs-toggle="tab" data-bs-target="#salgados" type="button" role="tab" aria-controls="salgados" aria-selected="false">Salgados</button>
+        </li>
+      </ul>
+      
+      <div class="tab-content" id="menuTabContent">
+        <div class="tab-pane fade show active" id="cafes" role="tabpanel" aria-labelledby="cafes-tab">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/cafes/espresso.jpg" class="menu-image w-100" alt="Espresso">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Espresso</span>
+                    <span class="menu-price">R$ 8,00</span>
+                  </div>
+                  <p class="menu-description">Café expresso tradicional, encorpado e aromático.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/cafes/cappuccino.jpg" class="menu-image w-100" alt="Cappuccino">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Cappuccino</span>
+                    <span class="menu-price">R$ 12,00</span>
+                  </div>
+                  <p class="menu-description">Expresso com leite vaporizado e uma pitada de cacau.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/cafes/latte.jpg" class="menu-image w-100" alt="Latte">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Latte</span>
+                    <span class="menu-price">R$ 14,00</span>
+                  </div>
+                  <p class="menu-description">Expresso suave com uma generosa camada de leite vaporizado.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/cafes/mocha.jpg" class="menu-image w-100" alt="Mocha">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Mocha</span>
+                    <span class="menu-price">R$ 16,00</span>
+                  </div>
+                  <p class="menu-description">Expresso com chocolate, leite vaporizado e chantilly.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="bebidas" role="tabpanel" aria-labelledby="bebidas-tab">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/bebidas-geladas/cold-brew.jpg" class="menu-image w-100" alt="Cold Brew">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Cold Brew</span>
+                    <span class="menu-price">R$ 15,00</span>
+                  </div>
+                  <p class="menu-description">Café extraído a frio por 12 horas, resultando em uma bebida suave e refrescante.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/bebidas-geladas/frappuccino.jpg" class="menu-image w-100" alt="Frappuccino">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Frappuccino</span>
+                    <span class="menu-price">R$ 18,00</span>
+                  </div>
+                  <p class="menu-description">Bebida gelada à base de café, leite e gelo batido. Disponível em diversos sabores.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/bebidas-geladas/iced-latte.jpg" class="menu-image w-100" alt="Iced Latte">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Iced Latte</span>
+                    <span class="menu-price">R$ 16,00</span>
+                  </div>
+                  <p class="menu-description">Café espresso com leite gelado e cubos de gelo. Refrescante e energizante.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="doces" role="tabpanel" aria-labelledby="doces-tab">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/doces/bolo-chocolate.jpg" class="menu-image w-100" alt="Bolo de Chocolate">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Bolo de Chocolate</span>
+                    <span class="menu-price">R$ 12,00</span>
+                  </div>
+                  <p class="menu-description">Fatia de bolo de chocolate com cobertura de ganache.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/doces/cheesecake.jpg" class="menu-image w-100" alt="Cheesecake">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Cheesecake</span>
+                    <span class="menu-price">R$ 15,00</span>
+                  </div>
+                  <p class="menu-description">Cheesecake cremoso com calda de frutas vermelhas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/doces/brownie.jpg" class="menu-image w-100" alt="Brownie">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Brownie</span>
+                    <span class="menu-price">R$ 10,00</span>
+                  </div>
+                  <p class="menu-description">Brownie de chocolate com nozes, servido com sorvete de creme.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="salgados" role="tabpanel" aria-labelledby="salgados-tab">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/salgados/croissant.jpg" class="menu-image w-100" alt="Croissant">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Croissant</span>
+                    <span class="menu-price">R$ 8,00</span>
+                  </div>
+                  <p class="menu-description">Croissant folhado, disponível em diversos sabores: tradicional, chocolate, presunto e queijo.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="menu-item">
+                <img src="images/cardapio/salgados/quiche.jpg" class="menu-image w-100" alt="Quiche">
+                <div class="menu-content">
+                  <div class="menu-title">
+                    <span>Quiche</span>
+                    <span class="menu-price">R$ 14,00</span>
+                  </div>
+                  <p class="menu-description">Quiche de alho-poró com bacon, servida com salada verde.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container text-center">
+      <h3 class="text-light mb-4">Assine nossa Newsletter</h3>
+      <p class="text-light mb-4">Receba novidades, promoções e eventos diretamente no seu e-mail.</p>
+      <form id="form-newsletter" class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="newsletter-button">Assinar</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contato" class="section-white py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Fale conosco</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="contact-form">
+            <form id="form-contato">
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+              </div>
+              <button type="submit" class="contact-button">Enviar mensagem</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-info">
+            <h4 class="mb-4">Informações de contato</h4>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h5>Endereço</h5>
+                <p>Rua das Flores, 123 - Centro<br>São Paulo - SP</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h5>Telefone</h5>
+                <p>(11) 99999-9999</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h5>Email</h5>
+                <p>contato@cafearoma.com.br</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h5>Horário de Funcionamento</h5>
+                <p>Segunda a Sexta: 8h às 20h<br>Sábados e Domingos: 9h às 18h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h4 class="footer-title">Café Aroma</h4>
+          <p>Um espaço acolhedor onde cada xícara conta uma história. Venha nos visitar e descubra o verdadeiro sabor do café artesanal.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h4 class="footer-title">Links Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 class="footer-title">Galeria</h4>
+          <div class="row g-2">
+            <div class="col-4">
+              <img src="images/galeria/galeria1.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
+            </div>
+            <div class="col-4">
+              <img src="images/galeria/galeria2.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
+            </div>
+            <div class="col-4">
+              <img src="images/galeria/galeria3.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
+            </div>
+            <div class="col-4">
+              <img src="images/galeria/galeria4.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
+            </div>
+            <div class="col-4">
+              <img src="images/galeria/galeria5.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
+            </div>
+            <div class="col-4">
+              <img src="images/galeria/galeria6.jpg" alt="Galeria Café Aroma" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Café Aroma. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
